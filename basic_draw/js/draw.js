@@ -3,7 +3,6 @@ let textHere = document.getElementById('textHere'); // display data
 let score = 0;
 let goLeft = true;
 let topLineX = 300;
-let timer = 5;
 
 const canvas1 = document.getElementById('canvas1');
 const ctx1 = canvas1.getContext('2d');
@@ -49,7 +48,7 @@ function drawPosenet(XY)
   let X = Math.floor(XY.x);
   let Y = Math.floor(XY.y);
   // textHere.innerHTML = Math.floor(XY.x) + " " + Math.floor(XY.y) + " Score: " + score;
-  textHere.innerHTML = X + " " + Y + " Score: " + score;// + " " + timer;
+  textHere.innerHTML = X + " " + Y + " Score: " + score;
   
   if (Y <= point2.pos.dy + point2.radius && Y >= point2.pos.dy - point2.radius)
   {
@@ -65,14 +64,12 @@ function drawPosenet(XY)
     }
   }
   
-  console.log(timer);
   if (Y > point1.pos.dy + 50 || Y < point1.pos.dy - 50 )
   {
     score -= 1;
   }
   if (score < 0)
   {
-    
     score = 0;
   }
 
