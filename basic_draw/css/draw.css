@@ -1,0 +1,24 @@
+body{
+  background-color: black;
+  color: white;
+}
+
+/* canvas1 is game canvas */
+#canvas1{
+  border-radius: 120px;
+  margin: 5px;
+}
+
+/* canvas2 is posenet canvas */
+#canvas2{
+  position:absolute;
+  top:0;
+  left:0;
+}
+
+#textHere{
+  z-index: 3;
+  position: absolute;
+  font-family: 'Courier New', Courier, monospace;
+  font-size: 20px;
+}
